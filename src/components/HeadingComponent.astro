@@ -1,0 +1,12 @@
+---
+
+const {
+    tag = 'h1',
+} = Astro.props;
+
+const Tag = tag;
+---
+
+<Tag  class={`font-bold tracking-tight ${Astro.props.className}`}>
+    <slot />
+</Tag>

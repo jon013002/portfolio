@@ -1,0 +1,65 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath, } from '@/i18n/utils';
+
+import LanguageSelector from "./LanguageSelector.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const navItems = [
+    {
+        label: t('nav.home'),
+        url: "/#home",
+    },
+    {
+        label: t('nav.about-me'),
+        url: "/#about-me",
+    },
+    {
+        label: t('nav.skills'),
+        url: "/#skills",
+    },
+]
+---
+<header class="fixed h-16 w-full px-10 z-10">
+    <nav class="flex justify-between items-center size-full">
+        <ul class="flex gap-4">
+            {
+                navItems.map((link) => (
+                    <li>
+                        <a
+                            class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+                            aria-label={link.label}
+                            href={link.url}
+                        >
+                            {link.label}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <LanguageSelector />
+    </nav>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document
+        .querySelectorAll<HTMLAnchorElement>('a[href^="/#"]')
+        .forEach((anchor) => {
+            anchor.addEventListener("click", (e: MouseEvent) => {
+            e.preventDefault();
+
+            const href = anchor.getAttribute("href") ?? "";
+            const id = href.split("#")[1];
+            const element = id ? document.getElementById(id) : null;
+
+            element?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+            });
+        });
+    });
+</script>
