@@ -1,0 +1,21 @@
+---
+const { currentLocale } = Astro
+import { getI18N } from "@/i18n"
+
+import ParagraphComponent from "@/components/ParagraphComponent.astro";
+import HeadingComponent from "@/components/HeadingComponent.astro";
+import TimeLine from "@/components/TimeLine.astro";
+
+const i18n = getI18N({ currentLocale })
+---
+
+<section class="h-fit w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 place-items-center">
+    <article>
+        <HeadingComponent className="text-2xl text-purple-heart-400">{ i18n.ABOUT_ME.TITLE}</HeadingComponent>
+        <ParagraphComponent className="text-pretty">{ i18n.ABOUT_ME.DESCRIPTION}</ParagraphComponent>
+    </article>
+
+    <article>
+        <TimeLine />
+    </article>
+</section>

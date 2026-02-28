@@ -1,0 +1,156 @@
+---
+const { currentLocale } = Astro;
+import { getI18N } from "@/i18n";
+
+import ParagraphComponent from "@/components/ParagraphComponent.astro";
+import HeadingComponent from "@/components/HeadingComponent.astro";
+
+import HTMLIcon from "@/components/icons/html.astro";
+import CSSIcon from "@/components/icons/css.astro";
+import JSIcon from "@/components/icons/javascript.astro";
+import PHPIcon from "@/components/icons/php.astro";
+import MySQLIcon from "@/components/icons/mysql.astro";
+import TailwindIcon from "@/components/icons/tailwind.astro";
+import VueIcon from "@/components/icons/vue.astro";
+import LaravelIcon from "@/components/icons/laravel.astro";
+import PostgreSQL from "@/components/icons/postgresql.astro";
+import AstroIcon from "@/components/icons/astro-icon.astro";
+import Docker from "@/components/icons/docker.astro";
+import Nest from "@/components/icons/nest.astro";
+
+const i18n = getI18N({ currentLocale });
+
+type SkillId =
+    | "html"
+    | "css"
+    | "javascript"
+    | "php"
+    | "mysql"
+    | "postgresql"
+    | "tailwind"
+    | "vue"
+    | "laravel"
+    | "astro"
+    | "docker"
+    | "nest";
+
+const SKILLS: Record<
+    SkillId,
+    {
+        label: string;
+        Icon?: any;
+        chipClass?: string;
+        iconClass?: string;
+    }
+> = {
+    html: {
+        label: "HTML",
+        Icon: HTMLIcon,
+        chipClass: "bg-orange-50 text-orange-900 border border-orange-200",
+    },
+    css: {
+        label: "CSS",
+        Icon: CSSIcon,
+        chipClass: "bg-blue-50 text-blue-900 border border-blue-200",
+    },
+    javascript: {
+        label: "JavaScript",
+        Icon: JSIcon,
+        chipClass: "bg-yellow-50 text-yellow-900 border border-yellow-200",
+    },
+    php: {
+        label: "PHP",
+        Icon: PHPIcon,
+        chipClass: "bg-indigo-50 text-indigo-900 border border-indigo-200",
+    },
+    mysql: {
+        label: "MySQL",
+        Icon: MySQLIcon,
+        chipClass: "bg-cyan-50 text-cyan-900 border border-cyan-200",
+    },
+    postgresql: {
+        label: "PostgreSQL",
+        Icon: PostgreSQL,
+        chipClass: "bg-blue-50 text-blue-900 border border-blue-200",
+    },
+    tailwind: {
+        label: "Tailwind CSS",
+        Icon: TailwindIcon,
+        chipClass: "bg-teal-50 text-teal-900 border border-teal-200",
+    },
+    vue: {
+        label: "Vue.js",
+        Icon: VueIcon,
+        chipClass: "bg-emerald-50 text-emerald-900 border border-emerald-200",
+    },
+    laravel: {
+        label: "Laravel",
+        Icon: LaravelIcon,
+        chipClass: "bg-red-50 text-red-900 border border-red-200",
+    },
+    nest: {
+        label: "NestJS",
+        Icon: Nest,
+        chipClass: "bg-red-50 text-red-900 border border-red-200",
+    },
+    astro: {
+        label: "Astro",
+        Icon: AstroIcon,
+        chipClass: "bg-gray-50 text-gray-900 border border-gray-200",
+    },
+    docker: {
+        label: "Docker",
+        Icon: Docker,
+        chipClass: "bg-blue-50 text-blue-900 border border-blue-200",
+    },
+};
+
+const skills: SkillId[] = [
+    "html",
+    "css",
+    "javascript",
+    "php",
+    "mysql",
+    "postgresql",
+    "tailwind",
+    "vue",
+    "laravel",
+    "nest",
+    "astro",
+    "docker",
+];
+---
+
+<div class="h-fit w-full grid place-items-center mt-14 mb-20">
+    <HeadingComponent className="text-2xl text-orange-400"
+        >{i18n.SKILLS.TITLE}</HeadingComponent
+    >
+    <ParagraphComponent className="mt-2 mb-12 max-w-lg text-center"
+        >{i18n.SKILLS.DESCRIPTION}
+    </ParagraphComponent>
+
+    <ul class="grid grid-cols-4 gap-4">
+        {
+            skills.map((id) => {
+                const skill = SKILLS[id];
+                const Icon = skill?.Icon;
+
+                return (
+                <li
+                    class={`px-3 py-1 rounded-full flex items-center justify-center gap-2 ${skill?.chipClass ?? "bg-white text-black border border-gray-200"}`}
+                >
+                    {Icon ? (
+                        <Icon class={`size-6 shrink-0 ${skill?.iconClass ?? ""}`} />
+                    ) : (
+                        <span class="size-6 shrink-0 grid place-items-center text-xs opacity-60">
+                            ?
+                        </span>
+                    )}
+
+                    <span class="text-sm font-medium">{skill?.label ?? id}</span>
+                </li>
+                );
+            })
+        }
+    </ul>
+</div>

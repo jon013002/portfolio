@@ -1,0 +1,29 @@
+---
+const { currentLocale } = Astro
+import { getI18N } from "@/i18n"
+
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import HeroSection from "@/components/sections/HeroSection.astro";
+import AboutMeSection from "@/components/sections/AboutMeSection.astro";
+import SkillsSection from "@/components/sections/SkillsSection.astro";
+
+const i18n = getI18N({ currentLocale })
+---
+<Layout title=`${i18n.HERO_TITLE}` description="hola">
+    <SectionContainer id="home">
+        <HeroSection />
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
+        <AboutMeSection />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+        <SkillsSection />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+    </SectionContainer>
+</Layout>

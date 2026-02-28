@@ -1,0 +1,19 @@
+---
+import HeadingComponent from "@/components/HeadingComponent.astro";
+import ParagraphComponent from "@/components/ParagraphComponent.astro";
+---
+
+<div class="flex flex-col items-center justify-center h-[calc(100dvh-64px)] w-full">
+    <img 
+        src="https://res.cloudinary.com/dyoqhod15/image/upload/v1772230570/avatar_hmd2qt.png" 
+        alt=""
+        class="border-4 border-emerald-400 size-56 object-cover rounded-full mb-4"
+    >
+    <HeadingComponent tag="h2" className="text-4xl">
+        Me llamo <span class="text-emerald-400">Jonathan Martínez</span>
+    </HeadingComponent>
+
+    <ParagraphComponent className="text-lg text-fuchsia-pink-400">
+        Desarrollador Frontend y Backend
+    </ParagraphComponent>
+</div>
