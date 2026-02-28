@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-emerald-50: #f0fdf4;
+    --color-emerald-100: #ddfbe7;
+    --color-emerald-200: #bdf5d2;
+    --color-emerald-300: #8aebae;
+    --color-emerald-400: #42d67a;
+    --color-emerald-500: #28bf61;
+    --color-emerald-600: #1b9e4d;
+    --color-emerald-700: #197c3f;
+    --color-emerald-800: #196236;
+    --color-emerald-900: #16512e;
+    --color-emerald-950: #062d17;
+
+    --color-fuchsia-pink-50: #fcf6fd;
+    --color-fuchsia-pink-100: #f8ebfc;
+    --color-fuchsia-pink-200: #f1d6f8;
+    --color-fuchsia-pink-300: #e8b6f1;
+    --color-fuchsia-pink-400: #db8be7;
+    --color-fuchsia-pink-500: #c85dd8;
+    --color-fuchsia-pink-600: #b344c1;
+    --color-fuchsia-pink-700: #91309b;
+    --color-fuchsia-pink-800: #78297f;
+    --color-fuchsia-pink-900: #652768;
+
+    --color-woodsmoke-50: #f5f6fa;
+    --color-woodsmoke-100: #eaecf4;
+    --color-woodsmoke-200: #d0d5e7;
+    --color-woodsmoke-300: #a7b1d2;
+    --color-woodsmoke-400: #7788b9;
+    --color-woodsmoke-500: #566aa1;
+    --color-woodsmoke-600: #435286;
+    --color-woodsmoke-700: #37436d;
+    --color-woodsmoke-800: #313a5b;
+    --color-woodsmoke-900: #2c324e;
+    --color-woodsmoke-950: #08090e;
+
+    --color-purple-heart-50: #f4f4fe;
+    --color-purple-heart-100: #ebebfc;
+    --color-purple-heart-200: #dad9fb;
+    --color-purple-heart-300: #bdbbf7;
+    --color-purple-heart-400: #9c94f1;
+    --color-purple-heart-500: #7b68ea;
+    --color-purple-heart-600: #6848df;
+    --color-purple-heart-700: #5836cb;
+    --color-purple-heart-800: #4d2fb2;
+    --color-purple-heart-900: #3e278b;
+    --color-purple-heart-950: #25175e;
+
+    --color-orange-50: #fff6ec;
+    --color-orange-100: #ffead3;
+    --color-orange-200: #ffd0a5;
+    --color-orange-300: #ffaf6d;
+    --color-orange-400: #ff8132;
+    --color-orange-500: #ff5e0a;
+    --color-orange-600: #ff4400;
+    --color-orange-700: #cc2e02;
+    --color-orange-800: #a1250b;
+    --color-orange-900: #82210c;
+    --color-orange-950: #460d04;
+}
