@@ -1,3 +1,25 @@
 {
-    "HERO_TITLE": "Frontend Developer & UI/UX Designer"
+    "HERO_TITLE": "Frontend Developer and Backend Developer",
+    "ABOUT_ME": {
+        "TITLE": "About me",
+        "DESCRIPTION": "I enjoy taking an idea from scratch and turning it into a real product, paying attention to details, code structure, and user experience. I always look for simple, efficient, and scalable solutions."
+    },
+    "SKILLS": {
+        "TITLE": "My skills",
+        "DESCRIPTION": "These are the technologies I have used and learned throughout my programming career from 2017 to the present."
+    },
+    "TIMELIINE": {
+        "ITEMS": [
+            {
+                "DATE": "September 2020 - August 2024",
+                "EDUCATION_LEVEL": "Higher Education - Bachelor's Degree in Information Technology Engineering",
+                "SCHOOL": "Universidad Politécnica del Estado de Morelos (UPEMOR)"
+            },
+            {
+                "DATE": "August 2017 - July 2020",
+                "EDUCATION_LEVEL": "High School - Programming Technician",
+                "SCHOOL": "Centro de Bachillerato Tecnológico Industrial y de Servicios No. 166 'Pablo Torres Burgos'"
+            }
+        ]
+    }
 }

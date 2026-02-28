@@ -17,10 +17,14 @@ export const LANGUAGES: Record<string, {
 
 export const ui = {
 	es: {
-		'nav.inicio': 'Inicio',
+		'nav.home': 'Inicio',
+		'nav.about-me': 'Acerca de mí',
+		'nav.skills': 'Mis habilidades',
 	},
 	en: {
-		'nav.inicio': 'Home',
+		'nav.home': 'Home',
+		'nav.about-me': 'About me',
+		'nav.skills': 'My skills',
 	},
 } as const;
 

@@ -1,3 +1,25 @@
 {
-    "HERO_TITLE": "Desarrollador Frontend & Diseñador UI/UX"
+    "HERO_TITLE": "Desarrollador Frontend y Backend",
+    "ABOUT_ME": {
+        "TITLE": "Acerca de mí",
+        "DESCRIPTION": "Disfruto llevar una idea desde cero hasta convertirla en un producto real, cuidando los detalles, la estructura del código y la experiencia del usuario. Siempre busco soluciones simples, eficientes y escalables."
+    },
+    "SKILLS": {
+        "TITLE": "Mis Habilidades",
+        "DESCRIPTION": "Estas son las tecnologías que he utilizado y aprendido a lo largo de mi carrera dentro de la programación desde 2017 hasta la actualidad."
+    },
+    "TIMELIINE": {
+        "ITEMS": [
+            {
+                "DATE": "Septiembre 2020 - Agosto 2024",
+                "EDUCATION_LEVEL": "Nivel Superior - Lic. Ingeniería en Tecnologías de la Información",
+                "SCHOOL": "Universidad Politécnica del Estado de Morelos (UPEMOR)"
+            },
+            {
+                "DATE": "Agosto 2017 - Julio 2020",
+                "EDUCATION_LEVEL": "Nivel Medio Superior - Técnico en Programación",
+                "SCHOOL": "Centro de Bachillerato Tecnológico Industrial y de Servicios No. 166 'Pablo Torres Burgos'"
+            }
+        ]
+    }
 }
