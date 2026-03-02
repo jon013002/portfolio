@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import { getLangFromUrl } from "@/i18n/utils";
 import "@fontsource-variable/onest"
 import "@/styles/global.css";
@@ -23,6 +24,8 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="robots" content="nofollow, noindex" />
     <title>{title}</title>
+
+    <ClientRouter />
   </head>
   <body>
     <Header />
