@@ -20,11 +20,13 @@ export const ui = {
 		'nav.home': 'Inicio',
 		'nav.about-me': 'Acerca de mí',
 		'nav.skills': 'Mis habilidades',
+		'nav.projects': 'Proyectos',
 	},
 	en: {
 		'nav.home': 'Home',
 		'nav.about-me': 'About me',
 		'nav.skills': 'My skills',
+		'nav.projects': 'Projects',
 	},
 } as const;
 

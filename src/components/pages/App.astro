@@ -8,6 +8,7 @@ import Layout from "@/layouts/Layout.astro";
 import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutMeSection from "@/components/sections/AboutMeSection.astro";
 import SkillsSection from "@/components/sections/SkillsSection.astro";
+import ProjectSection from "@/components/sections/ProjectSection.astro";
 
 const i18n = getI18N({ currentLocale })
 ---
@@ -16,14 +17,15 @@ const i18n = getI18N({ currentLocale })
         <HeroSection />
     </SectionContainer>
 
-    <SectionContainer id="about-me">
+    <SectionContainer id="about-me" class="md:max-w-2xl lg:max-w-4xl">
         <AboutMeSection />
     </SectionContainer>
 
-    <SectionContainer id="skills">
+    <SectionContainer id="skills" class="md:max-w-2xl lg:max-w-4xl">
         <SkillsSection />
     </SectionContainer>
 
     <SectionContainer id="projects">
+        <ProjectSection />
     </SectionContainer>
 </Layout>
