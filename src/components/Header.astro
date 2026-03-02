@@ -26,13 +26,13 @@ const navItems = [
 ]
 ---
 <header class="fixed backdrop-filter backdrop-blur-lg h-16 w-full px-10 z-10">
-    <nav class="flex justify-between items-center size-full">
-        <ul class="flex gap-4">
+    <nav class="flex justify-end md:justify-between items-center size-full">
+        <ul class="hidden md:flex gap-4">
             {
                 navItems.map((link) => (
                     <li>
                         <a
-                            class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+                            class="relative block px-2 py-2 transition hover:text-emerald-500"
                             aria-label={link.label}
                             href={link.url}
                         >

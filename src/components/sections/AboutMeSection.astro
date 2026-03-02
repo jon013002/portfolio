@@ -9,7 +9,7 @@ import TimeLine from "@/components/TimeLine.astro";
 const i18n = getI18N({ currentLocale })
 ---
 
-<section class="h-fit w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 place-items-center">
+<section class="h-fit w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 place-items-center px-10 md:px-0">
     <article>
         <HeadingComponent className="text-2xl text-purple-heart-400">{ i18n.ABOUT_ME.TITLE}</HeadingComponent>
         <ParagraphComponent className="text-pretty">{ i18n.ABOUT_ME.DESCRIPTION}</ParagraphComponent>
